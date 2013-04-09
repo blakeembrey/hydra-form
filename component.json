@@ -1,0 +1,8 @@
+{
+  "name": "awesome-form",
+  "version": "0.0.1",
+  "main": ["./form.css"],
+  "dependencies": {
+    "stylus-type-utils": "latest"
+  }
+}
