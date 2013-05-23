@@ -41,7 +41,7 @@ textarea {
   font-weight: 300;
   font-family: inherit;
   text-transform: none;
-  border: 1px solid #95a5a6;
+  border: 1px solid #bdc3c7;
   min-height: 2.225em;
   background: #fff;
   border-radius: 3px;
@@ -61,7 +61,7 @@ input[type="checkbox"] {
 input:focus,
 textarea:focus {
   outline: 0;
-  border: 1px solid #738889;
+  border: 1px solid #939da3;
 }
 input[type="radio"],
 input[type="checkbox"] {
