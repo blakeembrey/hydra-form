@@ -1,19 +1,25 @@
 {
-  "name": "hydra-form",
-  "version": "0.1.0",
-  "description": "",
-  "main": "lib/form.js",
+  "name": "hydra-grid",
+  "version": "0.0.2",
+  "description": "Powerful and extendable CSS grid",
+  "main": "lib/grid.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "",
   "keywords": [
-    "forms",
+    "grid",
+    "fluid",
+    "responsive",
+    "css",
     "stylus"
   ],
   "author": "Blake Embrey",
   "license": "MIT",
   "readmeFilename": "Readme.md",
+  "devDependencies": {
+    "stylus": "~0.32.1"
+  },
   "peerDependencies": {
     "stylus": "0.x"
   },

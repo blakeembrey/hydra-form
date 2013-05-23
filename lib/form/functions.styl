@@ -1,14 +1,17 @@
-form-field-state(text-color = #555, border-color = #ccc, background-color = #f5f5f5)
+form-field-state(text-color, border-color, background-color)
   .help-block,
-  .help-inline,
   .control-label
     color: text-color
   .input-with-feedback
+    color: text-color
     border-color: border-color
     &:focus,
     &.focused
-      color: text-color
+      border-color: darken(border-color, 20%)
       background-color: background-color
+    for selector in ":-moz-placeholder" ":-ms-input-placeholder" "::-webkit-input-placeholder"
+      &{selector}
+        color: lighten(text-color, 40%)
 
 // https://github.com/visionmedia/nib/blob/master/lib/nib/clearfix.styl
 clearfix()

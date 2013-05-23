@@ -4,23 +4,23 @@
     <meta charset="utf8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>Awesome Form • Clean Form CSS Resets</title>
+    <title>Hydra Form • Clean Form CSS Resets</title>
     <meta name="author" content="Blake Embrey">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="components/pinch-grid/grid.css">
-    <link rel="stylesheet" href="components/default-typography/typography.css">
-    <link rel="stylesheet" href="components/style-buttons/buttons.css">
+    <link rel="stylesheet" href="components/hydra-grid/grid.css">
+    <link rel="stylesheet" href="components/hydra-typography/typography.css">
+    <link rel="stylesheet" href="components/hydra-buttons/buttons.css">
     <link rel="stylesheet" href="form.css">
   </head>
   <body>
 
     <div class="grid-container">
 
-      <h1>Awesome Form</h1>
+      <h1>Hydra Form</h1>
 
       <div class="grid-row">
-        <form class="grid-span grid-tablet-span6">
+        <form class="grid-span grid-tablet-col-6">
           <input type="text" placeholder="Text input">
           <input type="email" placeholder="Email input">
           <input type="password" placeholder="Password input">
@@ -44,7 +44,7 @@
           </select>
         </form>
 
-        <div class="grid-span grid-tablet-span6">
+        <div class="grid-span grid-tablet-col-6">
           <form>
             <legend>Legend</legend>
             <label>Label name</label>
@@ -98,31 +98,31 @@
       <hr>
 
       <div class="grid-row">
-        <div class="grid-span grid-tablet-span6">
+        <div class="grid-span grid-tablet-col-6">
           <div class="control-group has-warning">
             <label class="control-label" for="inputWarning">Input with warning</label>
             <div class="controls">
               <input type="text" id="inputWarning" class="input-with-feedback">
-              <span class="help-inline">Something may have gone wrong</span>
+              <span class="help-block">Something may have gone wrong</span>
             </div>
           </div>
           <div class="control-group has-error">
             <label class="control-label" for="inputError">Input with error</label>
             <div class="controls">
               <input type="text" id="inputError" class="input-with-feedback">
-              <span class="help-inline">Please correct the error</span>
+              <span class="help-block">Please correct the error</span>
             </div>
           </div>
           <div class="control-group has-success">
             <label class="control-label" for="inputSuccess">Input with success</label>
             <div class="controls">
               <input type="text" id="inputSuccess" class="input-with-feedback">
-              <span class="help-inline">Woohoo!</span>
+              <span class="help-block">Woohoo!</span>
             </div>
           </div>
         </div>
 
-        <div class="grid-span grid-tablet-span6">
+        <div class="grid-span grid-tablet-col-6">
           <form>
             <input type="email" placeholder="Email" required>
             <input type="password" class="span3" placeholder="Password" required>

@@ -33,19 +33,18 @@ select,
 textarea {
   display: inline-block;
   width: 100%;
-  padding: 0.25em 0.45em;
   margin: 0 0 0.75em;
-  border: 1px solid #b1b1b1;
-  min-height: 2.125em;
-  color: #555;
+  padding: 0.3em 0.5em;
+  color: inherit;
   font-size: 100%;
+  line-height: 1.5;
+  font-weight: 300;
   font-family: inherit;
   text-transform: none;
-  background: #fdfdfd;
+  border: 1px solid #95a5a6;
+  min-height: 2.225em;
+  background: #fff;
   border-radius: 3px;
-  transition-property: color, border, border-color, background, background-color;
-  transition-duration: 0.2s;
-  transition-timing-function: linear;
 }
 select {
   height: 2.125em;
@@ -59,18 +58,14 @@ input[type="button"],
 input[type="checkbox"] {
   width: auto;
 }
-input,
-textarea {
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-}
 input:focus,
 textarea:focus {
   outline: 0;
-  border: 1px solid #52a8ec;
+  border: 1px solid #738889;
 }
 input[type="radio"],
 input[type="checkbox"] {
-  margin: 0.3em 0 0;
+  margin: 0.35em 0 0;
   margin-top: 1px 9;
   min-height: auto;
   line-height: normal;
@@ -78,7 +73,7 @@ input[type="checkbox"] {
 textarea,
 select[size],
 select[multiple] {
-  padding: 0.45em;
+  padding: 0.5em;
   height: auto;
   min-height: auto;
 }
@@ -98,15 +93,15 @@ input[type="checkbox"]:focus {
 }
 input:-moz-placeholder,
 textarea:-moz-placeholder {
-  color: #b5b5b5;
+  color: #95a5a6;
 }
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-  color: #b5b5b5;
+  color: #95a5a6;
 }
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: #b5b5b5;
+  color: #95a5a6;
 }
 .radio,
 .checkbox {
@@ -145,13 +140,14 @@ textarea::-webkit-input-placeholder {
   margin-top: 0;
   margin-left: 0.7em;
 }
+.input-mini {
+  font-size: 70%;
+}
 .input-small {
-  font-size: 0.8em;
-  border-radius: 2px;
+  font-size: 90%;
 }
 .input-large {
-  font-size: 1.5em;
-  border-radius: 6px;
+  font-size: 115%;
 }
 input[disabled],
 button[disabled],
@@ -166,8 +162,8 @@ fieldset[disabled] button,
 fieldset[disabled] select,
 fieldset[disabled] textarea {
   cursor: not-allowed;
-  opacity: 0.65;
-  background: #fdfdfd;
+  opacity: 0.6;
+  background: inherit;
   pointer-events: none;
 }
 input[type="radio"][disabled],
@@ -178,51 +174,89 @@ fieldset[disabled] input[type="radio"],
 fieldset[disabled] input[type="checkbox"] {
   background-color: transparent;
 }
-input:focus:invalid,
-textarea:focus:invalid,
-select:focus:invalid {
-  color: #8f2424;
-  border-color: #d14848;
-  background-color: #faebeb;
-}
 .has-success .help-block,
-.has-success .help-inline,
 .has-success .control-label {
-  color: #468847;
+  color: #2ecc71;
 }
 .has-success .input-with-feedback {
-  border-color: #468847;
+  color: #2ecc71;
+  border-color: #2ecc71;
 }
 .has-success .input-with-feedback:focus,
 .has-success .input-with-feedback.focused {
-  color: #468847;
-  background-color: #dff0d8;
+  border-color: #25a35a;
+  background-color: #f4fdf8;
+}
+.has-success .input-with-feedback:-moz-placeholder {
+  color: #80e2aa;
+}
+.has-success .input-with-feedback:-ms-input-placeholder {
+  color: #80e2aa;
+}
+.has-success .input-with-feedback::-webkit-input-placeholder {
+  color: #80e2aa;
 }
 .has-warning .help-block,
-.has-warning .help-inline,
 .has-warning .control-label {
-  color: #c09853;
+  color: #f39c12;
 }
 .has-warning .input-with-feedback {
-  border-color: #c09853;
+  color: #f39c12;
+  border-color: #f39c12;
 }
 .has-warning .input-with-feedback:focus,
 .has-warning .input-with-feedback.focused {
-  color: #c09853;
-  background-color: #fcf8e3;
+  border-color: #c77e0a;
+  background-color: #fefaf3;
+}
+.has-warning .input-with-feedback:-moz-placeholder {
+  color: #f8c471;
+}
+.has-warning .input-with-feedback:-ms-input-placeholder {
+  color: #f8c471;
+}
+.has-warning .input-with-feedback::-webkit-input-placeholder {
+  color: #f8c471;
 }
 .has-error .help-block,
-.has-error .help-inline,
 .has-error .control-label {
-  color: #8f2424;
+  color: #e74c3c;
 }
-.has-error .input-with-feedback {
-  border-color: #d14848;
+.has-error .input-with-feedback,
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid {
+  color: #e74c3c;
+  border-color: #e74c3c;
 }
 .has-error .input-with-feedback:focus,
-.has-error .input-with-feedback.focused {
-  color: #8f2424;
-  background-color: #faebeb;
+input:focus:invalid:focus,
+textarea:focus:invalid:focus,
+select:focus:invalid:focus,
+.has-error .input-with-feedback.focused,
+input:focus:invalid.focused,
+textarea:focus:invalid.focused,
+select:focus:invalid.focused {
+  border-color: #cf2b1a;
+  background-color: #fef6f5;
+}
+.has-error .input-with-feedback:-moz-placeholder,
+input:focus:invalid:-moz-placeholder,
+textarea:focus:invalid:-moz-placeholder,
+select:focus:invalid:-moz-placeholder {
+  color: #f1948a;
+}
+.has-error .input-with-feedback:-ms-input-placeholder,
+input:focus:invalid:-ms-input-placeholder,
+textarea:focus:invalid:-ms-input-placeholder,
+select:focus:invalid:-ms-input-placeholder {
+  color: #f1948a;
+}
+.has-error .input-with-feedback::-webkit-input-placeholder,
+input:focus:invalid::-webkit-input-placeholder,
+textarea:focus:invalid::-webkit-input-placeholder,
+select:focus:invalid::-webkit-input-placeholder {
+  color: #f1948a;
 }
 .form-actions {
   padding: 1.35em 1.4em 1.5em;
@@ -240,16 +274,9 @@ select:focus:invalid {
 .form-actions:after {
   clear: both;
 }
-.help-block,
-.help-inline {
+.help-block {
   color: #858585;
   margin: 0.3em 0;
-  vertical-align: top;
-}
-.help-block {
   display: block;
-}
-.help-inline {
-  display: inline-block;
-  padding: 0 0.3em;
+  vertical-align: top;
 }

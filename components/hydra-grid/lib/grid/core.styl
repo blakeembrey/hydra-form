@@ -1,0 +1,35 @@
+@import "config"
+
+grid-generate-core(root)
+  unless grid-root-config[1]
+
+    $grid-prefix        = ""
+    grid-root-config[1] = root or mixin == 'root'
+
+    if grid-prefix
+      $grid-prefix = s("%s-", unquote(grid-prefix))
+
+    .{$grid-prefix}container
+      margin: 0 auto
+      if support-for-ie and unit(grid-gutter-width) == "rem"
+        padding: 0 rem(grid-gutter-width / 2)
+      else
+        padding: 0 (grid-gutter-width / 2)
+      overflow: hidden
+
+    .{$grid-prefix}row
+      &,
+      & > &
+        if support-for-ie and unit(grid-gutter-width) == "rem"
+          margin: 0 rem(grid-gutter-width * -0.5)
+        else
+          margin: 0 (grid-gutter-width * -0.5)
+        display: block
+        text-align: grid-alignment
+        letter-spacing: -0.31em
+      & > &
+        margin: 0
+        overflow: hidden
+      > *
+        text-align: left
+        letter-spacing: normal

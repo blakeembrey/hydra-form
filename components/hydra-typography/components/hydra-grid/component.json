@@ -1,0 +1,20 @@
+{
+  "name": "hydra-grid",
+  "main": [
+    "./grid.css"
+  ],
+  "version": "0.0.0",
+  "dependencies": {
+    "stylus-type-utils": "latest"
+  },
+  "gitHead": "558ea825fbdd2c8b43064b2cb9f313afc4d11662",
+  "readme": "# Hydra Grid\n\nSimple CSS grid utilizing the `inline-block` and `box-sizing` properties for awesome layouts. It can easily be dropped in over the top of another CSS grid and can be used to size any element to the grid widths.\n\n## Installation\n\n```\n$ npm install hydra-grid --save\n$ bower install hydra-grid --save\n$ component install blakeembrey/hydra-grid\n```\n\n## Stylus API\n\n```\n// Support for old IE - currently enables the `rem` to `px` fallback for IE8\nsupport-for-ie = true\n\n// Grid system configuration\ngrid-prefix       = \"grid\" // Prefix all grid classes with this variable (disabled with Bootstrap support)\ngrid-alignment    = left // Alignment of the grid columns within a grid row\ngrid-gutter-width = 1.5rem // Gutter spacing between grid columns\ngrid-force-suffix = false // Force the suffix for single column count grids\n\ngrid-generate(columns, prefix)\n\n\ngrid-generate(6 12)\n\n// Results in two grids\n.grid-(col|push|pull|prefix|suffix)([0-6])of6\n.grid-(col|push|pull|prefix|suffix)([0-12])of12\n\ngrid-prefix = \"\" // Disable grid class prefixing\n\ngrid-generate(12)\n\n// Results in a single unprefixed grid without the `of(x)` syntax\n.(col|push|pull|prefix|suffix)([0-12])\n\ngrid-prefix = \"grid\"\n\ngrid-generate(12, \"desktop\")\n\n// Results in a grid prefixed and class prefixed grid output\n.grid-desktop-(col|push|pull|prefix|suffix)([0-12])\n```\n\n## CSS API\n\n```\n.grid-container /* Use this class for the page container */\n.grid-row /* Use this class to mark up a grid row */\n.grid-col-(x) /* This element span 100% / 12 * `x` width */\n.grid-(push|pull)-(x) /* Use these classes to rearrange markup for SEO or device context */\n.grid-(prefix|suffix)-(x) /* Use these classes to prepend or append `x` width worth of whitespace */\n```\n\nBy default the CSS grid is built for a single viewport and twelve columns. Using the Stylus API you can easily generate a number of different grid columns at different viewport sizes.\n\n## License\n\nMIT\n",
+  "readmeFilename": "Readme.md",
+  "_id": "hydra-grid@0.0.2",
+  "description": "Simple CSS grid utilizing the `inline-block` and `box-sizing` properties for awesome layouts. It can easily be dropped in over the top of another CSS grid and can be used to size any element to the grid widths.",
+  "commit": "558ea825fbdd2c8b43064b2cb9f313afc4d11662",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/hydra-grid.git"
+  }
+}

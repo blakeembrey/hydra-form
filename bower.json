@@ -1,0 +1,16 @@
+{
+  "name": "hydra-form",
+  "version": "0.1.0",
+  "main": [
+    "./form.css"
+  ],
+  "dependencies": {
+    "stylus-type-utils": "latest",
+    "hydra-typography": "latest"
+  },
+  "devDependencies": {
+    "hydra-typography": "latest",
+    "hydra-buttons": "latest",
+    "hydra-grid": "latest"
+  }
+}

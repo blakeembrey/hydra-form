@@ -8,31 +8,27 @@ form-help-color   ?= lighten(base-text-color, 20%)
 
 form-actions-background ?= #f5f5f5
 
-form-input-color         ?= #555
-form-input-background    ?= #fdfdfd
-form-input-border        ?= darken(form-input-background, 30%)
-form-input-border-active ?= #52a8ec
+form-input-color         ?= inherit
+form-input-background    ?= white
+form-input-font-weight   ?= 300
+form-input-border        ?= #95a5a6
+form-input-border-active ?= darken(form-input-border, 20%)
 form-input-border-radius ?= base-border-radius
 
-form-input-placeholder-color ?= #b5b5b5
+form-input-placeholder-color ?= #95a5a6
 
-form-input-font-size-small     ?= 0.8em
-form-input-border-radius-small ?= 2px
-form-input-font-size-large     ?= 1.5em
-form-input-border-radius-large ?= 6px
-
-form-input-opacity-disabled    ?= 0.65 // Use opacity by default
-form-input-background-disabled ?= form-input-background
+form-input-opacity-disabled    ?= 0.6
+form-input-background-disabled ?= inherit
 
 // Colors
-form-input-danger-color       ?= #8f2424
-form-input-danger-border      ?= #d14848
-form-input-danger-background  ?= #faebeb
+form-input-danger-color       ?= #e74c3c
+form-input-danger-border      ?= form-input-danger-color
+form-input-danger-background  ?= lighten(form-input-danger-color, 95%)
 
-form-input-warning-color      ?= #c09853
+form-input-warning-color      ?= #f39c12
 form-input-warning-border     ?= form-input-warning-color
-form-input-warning-background ?= #fcf8e3
+form-input-warning-background ?= lighten(form-input-warning-color, 95%)
 
-form-input-success-color      ?= #468847
+form-input-success-color      ?= #2ecc71
 form-input-success-border     ?= form-input-success-color
-form-input-success-background ?= #dff0d8
+form-input-success-background ?= lighten(form-input-success-color, 95%)
